@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">CheckboxSnackbar_Task2</string>
+    <string name="software_name_string">Правила дорожного движения</string>
+    <string name="TV_text_string">Информация</string>
+</resources>
