@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">RelativeLayoutToggleButtonScrollView</string>
+    <string name="titleTV">Электронная книга</string>
+    <string name="loadButtonText">Загрузить</string>
+</resources>
