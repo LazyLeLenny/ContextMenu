@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">IntentHomework</string>
+    <string name="calc_button">Калькулятор</string>
+    <string name="plus_string">+</string>
+    <string name="minus_string">-</string>
+    <string name="mult_string">*</string>
+    <string name="divide_string">/</string>
+    <string name="transmitResultString">Передать данные</string>
+</resources>
