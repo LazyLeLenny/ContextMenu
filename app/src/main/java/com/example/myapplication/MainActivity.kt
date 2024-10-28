@@ -9,6 +9,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.ListView
 import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.ViewCompat
@@ -53,12 +54,10 @@ class MainActivity : AppCompatActivity() {
             ageInputET.text.clear()
         }
         listViewLV.onItemClickListener =
-            AdapterView.OnItemClickListener {
-                parent, v, position, id ->
-                val user = adapter.getItem(position)
-                adapter.remove(user)
-            }
+            MyDialog.createDialog(this, adapter)
     }
+
+
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_main, menu)
