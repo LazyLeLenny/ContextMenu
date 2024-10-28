@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="title">Каталог пользователей</string>
+    <string name="exit">Exit</string>
+    <string name="nameInput">Имя</string>
+    <string name="ageInput">Возраст</string>
+    <string name="saveButton">Сохранить</string>
+</resources>
