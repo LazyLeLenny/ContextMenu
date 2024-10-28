@@ -29,15 +29,13 @@ class MainActivity : AppCompatActivity() {
         countBTN = findViewById(R.id.countBTN)
 
         countBTN.setOnClickListener {
-            val intentHeight = Intent(this, SecondScreen::class.java)
+            val intent = Intent(this, SecondScreen::class.java)
                 .putExtra("height", inputHeightET.text.toString())
-            val intentWeight = Intent(this, SecondScreen::class.java)
                 .putExtra("weight", inputWeightET.text.toString())
             if (inputHeightET.text.isEmpty() || inputWeightET.text.isEmpty()) {
                 Toast.makeText(this, "Заполните оба поля!", Toast.LENGTH_LONG).show()
             } else {
-                startActivity(intentWeight)
-                startActivity(intentHeight)
+                startActivity(intent)
             }
         }
     }

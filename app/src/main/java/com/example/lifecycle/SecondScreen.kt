@@ -8,6 +8,8 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import java.math.BigDecimal
+import java.math.RoundingMode
 
 class SecondScreen : AppCompatActivity() {
     private lateinit var indexTV : TextView
@@ -33,7 +35,7 @@ class SecondScreen : AppCompatActivity() {
         bodytypeIV = findViewById(R.id.bodytypeIV)
         recommendationsTV = findViewById(R.id.recommendationsTV)
 
-        indexTV.text = index(height, weight).toString()
+        indexTV.text = index(height, weight)?.let { BigDecimal(it).setScale(2, RoundingMode.HALF_EVEN).toString() }
 
         if (indexTV.text.toString().toDouble() in 18.5..24.9) {
             bodytypeIV.setImageResource(R.drawable.normal)
