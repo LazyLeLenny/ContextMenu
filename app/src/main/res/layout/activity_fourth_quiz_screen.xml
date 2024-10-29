@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FourthQuizScreen">
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/firstQuestionTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fourth_question"
+            android:textAlignment="center"
+            android:textSize="28sp"
+            android:layout_marginTop="148dp"/>
+
+        <RadioButton
+            android:id="@+id/oneRB"
+            android:layout_marginTop="24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/answr4_1"
+            android:textSize="24sp"/>
+
+        <RadioButton
+            android:id="@+id/twoRB"
+            android:layout_marginTop="24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/answr4_2"
+            android:textSize="24sp"/>
+
+        <RadioButton
+            android:id="@+id/threeRB"
+            android:layout_marginTop="24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/answr4_3"
+            android:textSize="24sp"/>
+
+
+    </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

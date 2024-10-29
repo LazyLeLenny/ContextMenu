@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">RadioButton</string>
+    <string name="app_title">Я историк</string>
+    <string name="begin_button">Начать</string>
+    <string name="first_question">Какой император руководил Россией во время Отечественной войны 1812 года?</string>
+    <string name="answr1_1">Александр I</string>
+    <string name="answr1_2">Александр II</string>
+    <string name="answr1_3">Александр III</string>
+    <string name="second_question">В каком году произошло восстание декабристов?</string>
+    <string name="answr2_1">В 1814 году</string>
+    <string name="answr2_2">В 1825 году</string>
+    <string name="answr2_3">В 1837 году</string>
+    <string name="third_question">Кто составлял основную часть декабристского восстания?</string>
+    <string name="answr3_1">Крепостные крестьяне</string>
+    <string name="answr3_2">Дворяне</string>
+    <string name="answr3_3">Ученые</string>
+    <string name="fourth_question">Кто в России 19 века провел реформу, в результате которой было введено крестьянское самоуправление в деревне?</string>
+    <string name="answr4_1">Огинский</string>
+    <string name="answr4_2">Столыпин</string>
+    <string name="answr4_3">Киселёв</string>
+    <string name="fifth_question">Какая из войн проходила в 19 веке?</string>
+    <string name="answr5_1">Война за польское наследство</string>
+    <string name="answr5_2">Северная война</string>
+    <string name="answr5_3">Крымская война</string>
+</resources>
