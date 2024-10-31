@@ -6,5 +6,5 @@ import com.example.myapplication.MainActivity.Person
 
 class UserViewModel : ViewModel() {
     var list = mutableListOf<Person>()
-    val currentList:  MutableLiveData<MutableList<MainActivity.Person>> by lazy { MutableLiveData<MutableList<MainActivity.Person>>() }
+    val currentList:  MutableLiveData<MutableList<Person>> by lazy { MutableLiveData<MutableList<Person>>() }
 }
