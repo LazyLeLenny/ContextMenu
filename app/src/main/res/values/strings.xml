@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">ListView</string>
     <string name="title">Каталог пользователей</string>
     <string name="exit">Exit</string>
     <string name="nameInput">Имя</string>

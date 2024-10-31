@@ -14,16 +14,19 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.lifecycle.ViewModelProvider
 
 class MainActivity : AppCompatActivity() {
     private lateinit var toolbarMain : Toolbar
     private lateinit var nameInputET : EditText
     private lateinit var ageInputET : EditText
     private lateinit var saveBTN : Button
+    lateinit var userViewModel : UserViewModel
+
 
 
     data class Person(val name: String, val age: String)
-    private val list = mutableListOf<Person>()
+    private var list = mutableListOf<Person>()
     private lateinit var listViewLV : ListView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,20 +38,26 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
+        userViewModel = ViewModelProvider(this)[UserViewModel::class.java]
+
         toolbarMain = findViewById(R.id.toolbarMain)
         setSupportActionBar(toolbarMain)
         title = "Каталог пользователей"
 
         listViewLV = findViewById(R.id.listViewLV)
-        val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, list)
+        val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, userViewModel.list)
         listViewLV.adapter = adapter
 
         nameInputET = findViewById(R.id.nameInputET)
         ageInputET = findViewById(R.id.ageInputET)
         saveBTN = findViewById(R.id.saveBTN)
 
+        userViewModel.currentList.observe(this) {
+            userViewModel.list = it
+        }
+
         saveBTN.setOnClickListener {
-            list.add(Person(nameInputET.text.toString(), ageInputET.text.toString()))
+            userViewModel.list.add(Person(nameInputET.text.toString(), ageInputET.text.toString()))
             adapter.notifyDataSetChanged()
             nameInputET.text.clear()
             ageInputET.text.clear()
