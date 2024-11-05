@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarMain"
+        android:background="@color/darkGreen"
+        tools:ignore="MissingConstraints"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:id="@+id/LinearLayoutOperands"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarMain"
+        app:layout_constraintVertical_bias="0.1"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/InputET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/AppTitleTV"
+            app:layout_constraintVertical_bias="0.1"
+            android:layout_weight="1"
+            android:hint="Ввод"
+            android:textSize="32sp"
+            android:textColor="@color/black"/>
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LinearLayoutInputOperator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resultTV"
+        app:layout_constraintVertical_bias="0.1">
+
+        <Button
+            android:id="@+id/SumBTN"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8pt"
+            android:layout_marginRight="8pt"
+            android:layout_weight="1"
+            android:backgroundTint="#008000"
+            android:text="@string/sumButtonValue"
+            android:textSize="22sp" />
+
+        <Button
+            android:id="@+id/DifBTN"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8pt"
+            android:layout_marginRight="8pt"
+            android:layout_weight="1"
+            android:backgroundTint="#008000"
+            android:text="@string/difButtonValue"
+            android:textSize="22sp" />
+
+        <Button
+            android:id="@+id/MultBTN"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8pt"
+            android:layout_marginRight="8pt"
+            android:layout_weight="1"
+            android:backgroundTint="#008000"
+            android:text="*"
+            android:textSize="22sp" />
+
+        <Button
+            android:id="@+id/DivBTN"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8pt"
+            android:layout_marginRight="8pt"
+            android:layout_weight="1"
+            android:backgroundTint="#008000"
+            android:text="/"
+            android:textSize="22sp" />
+    </LinearLayout>
+
+    <GridLayout
+        android:id="@+id/KeyboardGL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/LinearLayoutInputOperator"
+        android:columnCount="3"
+        android:rowCount="3"
+        app:layout_constraintStart_toStartOf="@id/LinearLayoutInputOperator"
+        app:layout_constraintEnd_toEndOf="@id/LinearLayoutInputOperator">
+
+        <Button
+            android:id="@+id/oneBTN"
+            android:text="1"
+            android:backgroundTint="#008000"/>
+        <Button
+            android:id="@+id/twoBTN"
+            android:text="2"
+            android:backgroundTint="#008000"/>
+        <Button
+            android:id="@+id/threeBTN"
+            android:text="3"
+            android:backgroundTint="#008000"/>
+        <Button
+            android:id="@+id/fourBTN"
+            android:text="4"
+            android:backgroundTint="#008000"/>
+        <Button
+            android:id="@+id/fiveBTN"
+            android:text="5"
+            android:backgroundTint="#008000"/>
+        <Button
+            android:id="@+id/sixBTN"
+            android:text="6"
+            android:backgroundTint="#008000"/>
+        <Button
+            android:id="@+id/sevenBTN"
+            android:text="7"
+            android:backgroundTint="#008000"/>
+        <Button
+            android:id="@+id/eightBTN"
+            android:text="8"
+            android:backgroundTint="#008000"/>
+        <Button
+            android:id="@+id/nineBTN"
+            android:text="9"
+            android:backgroundTint="#008000"/>
+    </GridLayout>
+    
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/KeyboardGL"
+        app:layout_constraintStart_toStartOf="@id/LinearLayoutInputOperator"
+        app:layout_constraintEnd_toEndOf="@id/LinearLayoutInputOperator">
+    <TableRow>
+        <Button
+            android:id="@+id/clearBTN"
+            android:text="Очистить"
+            android:backgroundTint="#008000"/>
+        <Button
+            android:id="@+id/equalsBTN"
+            android:text="="
+            android:backgroundTint="#008000"/>
+    </TableRow>
+</TableLayout>
+
+    <TextView
+        android:id="@+id/resultTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:hint="result"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LinearLayoutOperands"
+        app:layout_constraintVertical_bias="0.1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

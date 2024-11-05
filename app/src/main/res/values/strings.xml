@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Calculator</string>
+    <string name="title">Калькулятор времени</string>
+    <string name="sumButtonValue">+</string>
+    <string name="difButtonValue">-</string>
+    <string name="result">%1$s часов, %2$s минут, %3$s секунд</string>
+    <string name="exit">Выход</string>
+    <string name="reset">Очистить</string>
+</resources>
